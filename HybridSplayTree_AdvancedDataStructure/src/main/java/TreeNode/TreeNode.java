@@ -68,4 +68,8 @@ public class TreeNode {
     public void setParent(TreeNode parent) {
         this.parent = parent;
     }
+
+    public String toString(){
+        return Integer.toString(data);
+    }
 }

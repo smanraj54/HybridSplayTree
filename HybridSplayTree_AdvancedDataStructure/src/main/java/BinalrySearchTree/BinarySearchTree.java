@@ -3,6 +3,8 @@ package BinalrySearchTree;
 import TreeNode.TreeNode;
 import Utilities.CreateBasicTree;
 
+import java.util.List;
+
 public class BinarySearchTree implements CreateBasicTree {
 
 
@@ -43,6 +45,15 @@ public class BinarySearchTree implements CreateBasicTree {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public boolean insert(List<Integer> allData){
+        boolean addedVals = false;
+        for(Integer data: allData){
+            addedVals = insert(data) || addedVals;
+        }
+        return addedVals;
     }
 
     @Override
