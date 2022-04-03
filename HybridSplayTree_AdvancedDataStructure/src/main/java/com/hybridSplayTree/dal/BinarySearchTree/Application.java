@@ -1,7 +1,9 @@
-import BinalrySearchTree.BinarySearchTree;
-import PrintTree.NodesPerLevel;
-import TreeNode.TreeNode;
-import Utilities.GenerateRandomValues;
+package com.hybridSplayTree.dal.BinarySearchTree;
+
+import com.hybridSplayTree.dal.BinarySearchTree.BinarySearchTree;
+import com.hybridSplayTree.dal.BinarySearchTree.PrintTree.NodesPerLevel;
+import com.hybridSplayTree.dal.BinarySearchTree.TreeNode.TreeNode;
+import com.hybridSplayTree.dal.BinarySearchTree.Utilities.GenerateRandomValues;
 
 import java.util.List;
 

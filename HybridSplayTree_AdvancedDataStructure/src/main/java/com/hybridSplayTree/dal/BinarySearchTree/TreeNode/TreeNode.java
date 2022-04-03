@@ -1,4 +1,4 @@
-package TreeNode;
+package com.hybridSplayTree.dal.BinarySearchTree.TreeNode;
 
 public class TreeNode {
 
@@ -7,6 +7,10 @@ public class TreeNode {
     private int data = 0;
     private int leftWeight = 0;
     private int rightWeight = 0;
+
+    private TreeNode leftChild = null;
+    private TreeNode rightChild = null;
+    private TreeNode parent = null;
 
     public TreeNode(int data, TreeNode parent) {
         this.data = data;
@@ -17,9 +21,6 @@ public class TreeNode {
         this.data = data;
     }
 
-    private TreeNode leftChild = null;
-    private TreeNode rightChild = null;
-    private TreeNode parent = null;
 
     public int getData() {
         return data;
