@@ -1,3 +1,5 @@
 /HybridSplayTree_AdvancedDataStructure/target/
 /HybridSplayTree_AdvancedDataStructure/.idea/
 /.idea/
+/HybridSplayTree_AdvancedDataStructure/HybridSplayTree_AdvancedDataStructure.iml
+/HybridSplayTree_AdvancedDataStructure/${project.build.directory}
