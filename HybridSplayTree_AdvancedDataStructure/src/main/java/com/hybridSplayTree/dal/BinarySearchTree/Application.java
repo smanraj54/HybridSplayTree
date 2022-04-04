@@ -4,6 +4,7 @@ import com.hybridSplayTree.dal.BinarySearchTree.BinarySearchTree;
 import com.hybridSplayTree.dal.BinarySearchTree.PrintTree.NodesPerLevel;
 import com.hybridSplayTree.dal.BinarySearchTree.TreeNode.TreeNode;
 import com.hybridSplayTree.dal.BinarySearchTree.Utilities.GenerateRandomValues;
+import com.hybridSplayTree.dal.BinarySearchTree.WeightManagement.UpdateWeights;
 
 import java.util.List;
 
@@ -16,6 +17,8 @@ public class Application {
 
         BinarySearchTree binarySearchTree = new BinarySearchTree();
         binarySearchTree.insert(newData);
+        UpdateWeights updateWeights = new UpdateWeights();
+        updateWeights.updateWeightsOfNodes(binarySearchTree.getHeadNode());
 
         NodesPerLevel nodesPerLevel = new NodesPerLevel();
         List<List<TreeNode>> listOfNodes = nodesPerLevel.findNodesPerLevel(
