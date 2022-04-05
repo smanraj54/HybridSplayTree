@@ -3,3 +3,4 @@
 /.idea/
 /HybridSplayTree_AdvancedDataStructure/HybridSplayTree_AdvancedDataStructure.iml
 /HybridSplayTree_AdvancedDataStructure/${project.build.directory}
+/.DS_Store
