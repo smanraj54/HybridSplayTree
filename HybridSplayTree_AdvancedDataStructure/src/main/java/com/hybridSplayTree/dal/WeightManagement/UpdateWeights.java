@@ -1,6 +1,6 @@
-package com.hybridSplayTree.dal.BinarySearchTree.WeightManagement;
+package com.hybridSplayTree.dal.WeightManagement;
 
-import com.hybridSplayTree.dal.BinarySearchTree.TreeNode.TreeNode;
+import com.hybridSplayTree.dal.TreeNode.TreeNode;
 
 public class UpdateWeights {
     public void updateWeightsOfNodes(TreeNode HeadNode) {

@@ -1,12 +1,11 @@
-package com.hybridSplayTree.dal.BinarySearchTree;
+package com.hybridSplayTree.dal;
 
 import com.hybridSplayTree.dal.BinarySearchTree.BinarySearchTree;
-import com.hybridSplayTree.dal.BinarySearchTree.PrintTree.NodesPerLevel;
-import com.hybridSplayTree.dal.BinarySearchTree.PrintTree.PrintFile;
-import com.hybridSplayTree.dal.BinarySearchTree.PrintTree.PrintTreeForm;
-import com.hybridSplayTree.dal.BinarySearchTree.TreeNode.TreeNode;
-import com.hybridSplayTree.dal.BinarySearchTree.Utilities.GenerateRandomValues;
-import com.hybridSplayTree.dal.BinarySearchTree.WeightManagement.UpdateWeights;
+import com.hybridSplayTree.dal.PrintTree.NodesPerLevel;
+import com.hybridSplayTree.dal.PrintTree.PrintTreeForm;
+import com.hybridSplayTree.dal.TreeNode.TreeNode;
+import com.hybridSplayTree.dal.Utilities.GenerateRandomValues;
+import com.hybridSplayTree.dal.WeightManagement.UpdateWeights;
 
 import java.io.IOException;
 import java.util.List;

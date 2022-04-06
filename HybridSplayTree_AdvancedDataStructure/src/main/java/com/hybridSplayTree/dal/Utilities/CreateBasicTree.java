@@ -1,6 +1,6 @@
-package com.hybridSplayTree.dal.BinarySearchTree.Utilities;
+package com.hybridSplayTree.dal.Utilities;
 
-import com.hybridSplayTree.dal.BinarySearchTree.TreeNode.TreeNode;
+import com.hybridSplayTree.dal.TreeNode.TreeNode;
 
 import java.util.List;
 

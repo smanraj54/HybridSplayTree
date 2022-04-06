@@ -1,4 +1,4 @@
-package com.hybridSplayTree.dal.BinarySearchTree.PrintTree;
+package com.hybridSplayTree.dal.PrintTree;
 
 import java.io.BufferedWriter;
 import java.io.File;

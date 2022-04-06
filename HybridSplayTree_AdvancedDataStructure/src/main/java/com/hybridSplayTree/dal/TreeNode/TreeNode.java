@@ -1,4 +1,4 @@
-package com.hybridSplayTree.dal.BinarySearchTree.TreeNode;
+package com.hybridSplayTree.dal.TreeNode;
 
 public class TreeNode {
 

@@ -1,4 +1,4 @@
-package com.hybridSplayTree.dal.BinarySearchTree.Utilities;
+package com.hybridSplayTree.dal.Utilities;
 
 import java.util.LinkedList;
 import java.util.List;
