@@ -1,6 +1,7 @@
 package com.hybridSplayTree.dal.BinarySearchTree;
 
 import com.hybridSplayTree.dal.TreeNode.TreeNode;
+import com.hybridSplayTree.dal.TreeNodeOperations.TreeNodeOperations;
 import com.hybridSplayTree.dal.Utilities.CreateBasicTree;
 
 import java.util.List;
@@ -12,12 +13,7 @@ public class BinarySearchTree implements CreateBasicTree {
 
     @Override
     public boolean insert(int data) {
-        if (HeadNode == null) {
-            HeadNode = new TreeNode(data, null);
-            return true;
-        }
-        TreeNode current = new TreeNode(data);
-        return insert(current);
+        return insert(new TreeNode(data));
     }
 
     @Override
@@ -28,7 +24,7 @@ public class BinarySearchTree implements CreateBasicTree {
         if (HeadNode == null) {
             HeadNode = dataNode;
         }
-        TreeNode parentNode = findParent(HeadNode, data);
+        TreeNode parentNode = TreeNodeOperations.getInstance().findParent(HeadNode, data);
         if (parentNode == null) {
             //System.err.println("Duplicate entry");
             return false;
@@ -49,11 +45,11 @@ public class BinarySearchTree implements CreateBasicTree {
 
     @Override
     public boolean insert(List<Integer> allData){
-        boolean addedVals = false;
+        boolean elementsAdded = false;
         for(Integer data: allData){
-            addedVals = insert(data) || addedVals;
+            elementsAdded = insert(data) || elementsAdded;
         }
-        return addedVals;
+        return elementsAdded;
     }
 
     @Override
@@ -86,19 +82,6 @@ public class BinarySearchTree implements CreateBasicTree {
         HeadNode = data;
     }
 
-    private TreeNode findParent(TreeNode current, int data) {
-        if ((data < current.getData() && current.getLeftChild() == null) ||
-                (data > current.getData() && current.getRightChild() == null)) {
-            return current;
-        }
-        if (data < current.getData()) {
-            return findParent(current.getLeftChild(), data);
-        }
-        if (data > current.getData()) {
-            return findParent(current.getRightChild(), data);
-        }
-        return null;
-    }
 
 
 }

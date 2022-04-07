@@ -2,8 +2,8 @@ package com.hybridSplayTree.dal.WeightManagement;
 
 import com.hybridSplayTree.dal.TreeNode.TreeNode;
 
-public class UpdateWeights {
-    public void updateWeightsOfNodes(TreeNode HeadNode) {
+public class AddWeights {
+    public void addWeightsToNodes(TreeNode HeadNode) {
         updateAllNodes(HeadNode);
     }
 
