@@ -17,7 +17,7 @@ public class PrintFile {
 
 
     private PrintFile(String treeType) throws IOException {
-        File file = new File(path);
+        File file = new File(path+treeType);
         deleteDir(file);
         Files.createDirectories(Paths.get(path+treeType));
         fileWriter = new FileWriter(new File(path+treeType+"/"+treeType+".txt"));

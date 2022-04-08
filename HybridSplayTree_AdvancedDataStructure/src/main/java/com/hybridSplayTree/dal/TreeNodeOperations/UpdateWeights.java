@@ -4,7 +4,7 @@ import com.hybridSplayTree.dal.TreeNode.TreeNode;
 
 public class UpdateWeights {
 
-    public static UpdateWeights instance = null;
+    private static UpdateWeights instance = null;
 
     private UpdateWeights() {
     }
@@ -53,6 +53,33 @@ public class UpdateWeights {
 
         }
         return false;
+    }
+
+    public boolean updateWeightsFromBase(TreeNode node){
+        int leftWeight = 0;
+        int rightWeight = 0;
+        //boolean updated = false;
+
+        while(node!=null){
+            if(node.getLeftChild()!=null){
+                leftWeight = maxVal(node.getLeftChild().getLeftWeight(), node.getLeftChild().getRightWeight())+1;
+            }
+            if(node.getRightChild()!=null){
+                rightWeight = maxVal(node.getRightChild().getLeftWeight(), node.getRightChild().getRightWeight())+1;
+            }
+            if(node.getLeftWeight()==leftWeight && node.getRightWeight()==rightWeight){
+                return false;
+
+            }
+            node.setLeftWeight(leftWeight);
+            node.setRightWeight(rightWeight);
+            node = node.getParent();
+        }
+        return true;
+
+
+
+
     }
 
 }

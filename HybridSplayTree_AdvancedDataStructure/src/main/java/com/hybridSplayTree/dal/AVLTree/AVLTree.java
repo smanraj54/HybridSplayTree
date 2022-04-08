@@ -37,8 +37,17 @@ public class AVLTree implements CreateBasicTree {
         UpdateWeights.getInstance().updateWeights(data);
         TreeNode unBalancedNode = CheckUnBalancedNode.getInstance().findUnBalancedNode(data);
         String orientation = CheckUnBalancedNode.getInstance().findOrientation(unBalancedNode);
-        if(!orientation.equals("") || unBalancedNode != null )
+        if(!orientation.equals("") || unBalancedNode != null ) {
             System.out.println("\"" + orientation + "\" At Node = " + unBalancedNode);
+            TreeNode temp = BalancingNode.getInstance().balanceNode(unBalancedNode, orientation);
+            if(temp != null){
+                HeadNode = temp;
+            }
+            unBalancedNode = CheckUnBalancedNode.getInstance().findUnBalancedNode(data);
+            if(unBalancedNode!=null){
+                System.err.println("Still unbalanced!!");
+            }
+        }
 
         return true;
 
