@@ -1,4 +1,4 @@
-package com.hybridSplayTree.dal.AVLTree;
+package com.hybridSplayTree.dal.Trees.AVLTree;
 
 import com.hybridSplayTree.dal.TreeNode.TreeNode;
 import com.hybridSplayTree.dal.TreeNodeOperations.CheckUnBalancedNode;

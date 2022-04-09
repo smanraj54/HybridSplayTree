@@ -1,4 +1,4 @@
-package com.hybridSplayTree.dal.AVLTree;
+package com.hybridSplayTree.dal.Trees.AVLTree;
 
 import com.hybridSplayTree.dal.TreeNode.TreeNode;
 import com.hybridSplayTree.dal.TreeNodeOperations.UpdateWeights;
@@ -116,7 +116,7 @@ public class BalancingNode {
     private TreeNode rightLeftRotation(TreeNode node){
         rightRotation(node.getRightChild());
 
-        return rightRotation(node);
+        return leftRotation(node);
     }
 
     private boolean balanceWeights(TreeNode node){

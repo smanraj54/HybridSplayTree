@@ -1,4 +1,4 @@
-package com.hybridSplayTree.dal.BinarySearchTree;
+package com.hybridSplayTree.dal.Trees.BinarySearchTree;
 
 import com.hybridSplayTree.dal.TreeNode.TreeNode;
 import com.hybridSplayTree.dal.TreeNodeOperations.TreeNodeOperations;

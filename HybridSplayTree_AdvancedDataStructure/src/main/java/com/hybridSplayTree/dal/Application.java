@@ -1,15 +1,10 @@
 package com.hybridSplayTree.dal;
 
-import com.hybridSplayTree.dal.AVLTree.AVLTree;
-import com.hybridSplayTree.dal.BinarySearchTree.BinarySearchTree;
-import com.hybridSplayTree.dal.PrintTree.NodesPerLevel;
+import com.hybridSplayTree.dal.Trees.AVLTree.AVLTree;
 import com.hybridSplayTree.dal.PrintTree.PrintTreeForm;
-import com.hybridSplayTree.dal.TreeNode.TreeNode;
-import com.hybridSplayTree.dal.Utilities.GenerateRandomValues;
-import com.hybridSplayTree.dal.WeightManagement.AddWeights;
+import com.hybridSplayTree.dal.Trees.SplayTree.SplayTree;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Scanner;
 
 public class Application {
@@ -33,11 +28,13 @@ public class Application {
         printTreeForm.printTreeFormat(binarySearchTree.getHeadNode());
         */
         AVLTree avlTree = new AVLTree();
+        SplayTree splayTree = new SplayTree();
+
         Scanner sc = new Scanner(System.in);
         for(;;){
-            avlTree.insert(sc.nextInt());
-            PrintTreeForm printTreeForm = new PrintTreeForm("AVL_Tree");
-            printTreeForm.printTreeFormat(avlTree.getHeadNode());
+            splayTree.insert(sc.nextInt());
+            PrintTreeForm printTreeForm = new PrintTreeForm("Splay_Tree");
+            printTreeForm.printTreeFormat(splayTree.getHeadNode());
         }
 
         //System.out.println("Hello!");
