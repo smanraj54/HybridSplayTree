@@ -11,6 +11,8 @@ import java.util.List;
 public class AVLTree implements CreateBasicTree {
 
     private TreeNode HeadNode = null;
+    private TreeNode minNode = null;
+    private TreeNode maxNode = null;
 
     @Override
     public boolean insert(int data) {
@@ -21,11 +23,23 @@ public class AVLTree implements CreateBasicTree {
     public boolean insert(TreeNode data) {
         if(HeadNode == null){
             HeadNode = data;
+            maxNode = data;
+            minNode = data;
+            return true;
         }
+
         TreeNode parent = TreeNodeOperations.getInstance().findParent(HeadNode, data.getData());
         if(parent == null || data.getData() == parent.getData() ){
             return false;
         }
+
+        if(data.getData() < minNode.getData()){
+            minNode = data;
+        }
+        else if(data.getData() > maxNode.getData()){
+            maxNode = data;
+        }
+
         data.setParent(parent);
         if(data.getData()< parent.getData()){
             parent.setLeftChild(data);
@@ -89,5 +103,21 @@ public class AVLTree implements CreateBasicTree {
     @Override
     public void setHeadNode(TreeNode data) {
         this.HeadNode = data;
+    }
+
+    public TreeNode getMinNode() {
+        return minNode;
+    }
+
+    public void setMinNode(TreeNode minNode) {
+        this.minNode = minNode;
+    }
+
+    public TreeNode getMaxNode() {
+        return maxNode;
+    }
+
+    public void setMaxNode(TreeNode maxNode) {
+        this.maxNode = maxNode;
     }
 }

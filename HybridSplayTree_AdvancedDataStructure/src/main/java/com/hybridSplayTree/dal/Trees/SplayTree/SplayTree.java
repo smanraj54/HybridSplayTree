@@ -9,8 +9,10 @@ import java.util.List;
 
 public class SplayTree implements CreateBasicTree {
 
-    private TreeNode HeadNode = null;
+    protected TreeNode HeadNode = null;
+    protected TreeNode minNode = null;
 
+    protected TreeNode maxNode = null;
     @Override
     public boolean insert(int data) {
         return insert(new TreeNode(data, null));
@@ -54,11 +56,14 @@ public class SplayTree implements CreateBasicTree {
     @Override
     public TreeNode findTreeNode(TreeNode headNode, int data) {
         TreeNode current  = reccursiveFindNode(headNode, data);
-        SplayNodeToTop.getInstance().splayNodeToTop(current);
+        TreeNode temp = SplayNodeToTop.getInstance().splayNodeToTop(current);
+        if(temp!=null){
+            setHeadNode(temp);
+        }
         return null;
     }
 
-    private TreeNode reccursiveFindNode(TreeNode current, int data){
+    protected TreeNode reccursiveFindNode(TreeNode current, int data){
         if(current==null || current.getData() == data){
             return current;
         }
@@ -79,7 +84,7 @@ public class SplayTree implements CreateBasicTree {
 
     }
 
-    private TreeNode reccursiveInsertNodeParent(TreeNode current, TreeNode data){
+    protected TreeNode reccursiveInsertNodeParent(TreeNode current, TreeNode data){
         if(current == null || data == null || current.getData()==data.getData()){
             return null;
         }
@@ -90,7 +95,7 @@ public class SplayTree implements CreateBasicTree {
         return reccursiveInsertNodeParent(current.getLeftChild(), data);
     }
 
-    private boolean splayToTheTop(){
+    protected boolean splayToTheTop(){
         return false;
     }
 
@@ -107,5 +112,21 @@ public class SplayTree implements CreateBasicTree {
     @Override
     public void setHeadNode(TreeNode data) {
         HeadNode = data;
+    }
+
+    public TreeNode getMinNode() {
+        return minNode;
+    }
+
+    public void setMinNode(TreeNode minNode) {
+        this.minNode = minNode;
+    }
+
+    public TreeNode getMaxNode() {
+        return maxNode;
+    }
+
+    public void setMaxNode(TreeNode maxNode) {
+        this.maxNode = maxNode;
     }
 }
