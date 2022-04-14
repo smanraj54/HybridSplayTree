@@ -14,4 +14,11 @@ public interface CreateBasicTree {
     void setHeadNode(int data);
     void setHeadNode(TreeNode data);
 
+    void setMinNode(TreeNode minNode);
+
+    void setMaxNode(TreeNode maxNode);
+
+    TreeNode getMinNode();
+    TreeNode getMaxNode();
+
 }

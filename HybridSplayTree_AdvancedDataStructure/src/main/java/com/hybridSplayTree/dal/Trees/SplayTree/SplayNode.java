@@ -46,7 +46,7 @@ public class SplayNode {
     }
 
     private boolean splayZag(TreeNode current){
-        System.out.println("\n\n\tZag-Splay\n\n\t");
+        //System.out.println("\n\n\tZag-Splay\n\n\t");
         TreeNode parent =  current.getParent();
         if(parent == null){
             return false;
@@ -64,7 +64,7 @@ public class SplayNode {
     }
 
     private boolean splayZig(TreeNode current){
-        System.out.println("\n\n\tZig-Splay\n\n\t");
+        //System.out.println("\n\n\tZig-Splay\n\n\t");
         TreeNode parent =  current.getParent();
         if(parent == null){
             return false;
@@ -82,7 +82,7 @@ public class SplayNode {
     }
 
     private boolean splayZigZig(TreeNode current){
-        System.out.println("\n\n\tZigZig-Splay\n\n\t");
+        //System.out.println("\n\n\tZigZig-Splay\n\n\t");
         TreeNode parent = current.getParent();
         if(parent == null)return false;
 
@@ -107,7 +107,7 @@ public class SplayNode {
     }
 
     private boolean splayZagZag(TreeNode current){
-        System.out.println("\n\n\tZagZag-Splay\n\n");
+        //System.out.println("\n\n\tZagZag-Splay\n\n");
         TreeNode parent = current.getParent();
         if(parent == null)return false;
 
@@ -133,7 +133,7 @@ public class SplayNode {
     }
 
     private boolean splayZigZag(TreeNode current){
-        System.out.println("\n\n\tZigZag-Splay\n\n\t");
+        //System.out.println("\n\n\tZigZag-Splay\n\n\t");
         TreeNode parent = current.getParent();
         if(parent == null)return false;
 
@@ -154,7 +154,7 @@ public class SplayNode {
     }
 
     private boolean splayZagZig(TreeNode current){
-        System.out.println("\n\n\tZagZig-Splay\n\n\t");
+        //System.out.println("\n\n\tZagZig-Splay\n\n\t");
         TreeNode parent = current.getParent();
         if(parent == null)return false;
 

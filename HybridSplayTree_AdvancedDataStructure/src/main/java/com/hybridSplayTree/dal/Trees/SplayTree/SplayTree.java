@@ -55,6 +55,9 @@ public class SplayTree implements CreateBasicTree {
 
     @Override
     public TreeNode findTreeNode(TreeNode headNode, int data) {
+        if(headNode.getData() == data){
+            return headNode;
+        }
         TreeNode current  = reccursiveFindNode(headNode, data);
         TreeNode temp = SplayNodeToTop.getInstance().splayNodeToTop(current);
         if(temp!=null){

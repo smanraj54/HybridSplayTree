@@ -10,6 +10,8 @@ public class BinarySearchTree implements CreateBasicTree {
 
 
     private TreeNode HeadNode = null;
+    private TreeNode minNode = null;
+    private TreeNode maxNode = null;
 
     @Override
     public boolean insert(int data) {
@@ -23,11 +25,22 @@ public class BinarySearchTree implements CreateBasicTree {
 
         if (HeadNode == null) {
             HeadNode = dataNode;
+            maxNode = dataNode;
+            minNode = dataNode;
+            return false;
         }
+
         TreeNode parentNode = TreeNodeOperations.getInstance().findParent(HeadNode, data);
-        if (parentNode == null) {
+        if (parentNode == null || parentNode.getData() == dataNode.getData()) {
             //System.err.println("Duplicate entry");
             return false;
+        }
+
+        if(dataNode.getData() < minNode.getData()){
+            minNode = dataNode;
+        }
+        else if(dataNode.getData() > maxNode.getData()){
+            maxNode = dataNode;
         }
 
         dataNode.setParent(parentNode);
@@ -82,6 +95,22 @@ public class BinarySearchTree implements CreateBasicTree {
         HeadNode = data;
     }
 
+    @Override
+    public TreeNode getMinNode() {
+        return minNode;
+    }
+
+    public void setMinNode(TreeNode minNode) {
+        this.minNode = minNode;
+    }
+
+    public TreeNode getMaxNode() {
+        return maxNode;
+    }
+
+    public void setMaxNode(TreeNode maxNode) {
+        this.maxNode = maxNode;
+    }
 
 
 }

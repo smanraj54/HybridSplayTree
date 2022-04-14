@@ -9,6 +9,9 @@ import com.hybridSplayTree.dal.Utilities.CreateBasicTree;
 public class HybridSplayTree extends SplayTree implements CreateBasicTree{
 
     public TreeNode findTreeNode(TreeNode headNode, int data){
+        if(headNode.getData() == data){
+            return headNode;
+        }
         super.findTreeNode(headNode, data);
         TreeNode newHead = getHeadNode();
         if(newHead == getMinNode() || newHead == getMaxNode()){
@@ -19,7 +22,7 @@ public class HybridSplayTree extends SplayTree implements CreateBasicTree{
             if(orientation.equals("")){
                 break;
             }
-            System.out.println("\"" + orientation + "\" At Node = " + headNode);
+            //System.out.println("\"" + orientation + "\" At Node = " + headNode);
             BalancingNode.getInstance().balanceNode(headNode, orientation);
         }
         return newHead;
