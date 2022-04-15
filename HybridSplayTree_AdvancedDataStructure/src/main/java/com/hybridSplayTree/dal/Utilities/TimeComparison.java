@@ -91,6 +91,7 @@ public class TimeComparison {
         Long averageFindTime = (searchStopTime - searchStartTime)/numberOfElements;
         Long worstSearch =  stopSearchTimeMinNode - startSearchTimeMinNode;
         Long bestSearch = stopBestSearch - startBestSearch;
+
         System.out.println("\n\n\n\t\t"+treeType.name()+" Operations:");
         System.out.println("\n\t\tAverage Time complexity of Search Operation = "+ averageFindTime);
         System.out.println("\n\t\tSearch Time complexity of recently added element = "+ bestSearch);

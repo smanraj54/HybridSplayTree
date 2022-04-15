@@ -9,10 +9,10 @@ import com.hybridSplayTree.dal.Utilities.CreateBasicTree;
 public class HybridSplayTree extends SplayTree implements CreateBasicTree{
 
     public TreeNode findTreeNode(TreeNode headNode, int data){
+        super.findTreeNode(headNode, data);
         if(headNode.getData() == data){
             return headNode;
         }
-        super.findTreeNode(headNode, data);
         TreeNode newHead = getHeadNode();
         if(newHead == getMinNode() || newHead == getMaxNode()){
             return newHead;
